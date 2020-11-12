@@ -11,6 +11,9 @@ import Home from "./components/home.component";
 import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardAdmin from "./components/board-admin.component";
+import BoardEmployee from "./components/board-employee.component";
+import CreateEmployeeComponent from "./components/CreateEmployeeComponent";
+import ViewEmployeeComponent from "./components/ViewEmployeeComponent";
 
 class App extends Component {
   constructor(props) {
@@ -121,8 +124,11 @@ class App extends Component {
             <Route exact path="/profile" component={Profile} />
             <Route path="/user" component={BoardUser} />
             <Route path="/admin" component={BoardAdmin} />
-          
-          
+            <Route path="/employees" component={BoardEmployee} />
+            <Route path="/add-employee/:id" component={CreateEmployeeComponent} />
+            <Route path="/view-employee/:id" component={ViewEmployeeComponent} />
+           
+                           
           </Switch>
         </div>
       </div>
